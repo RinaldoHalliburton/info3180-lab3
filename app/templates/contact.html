@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block main %}
+<div class="form-div">
+  <form method="POST">
+    {{ form.csrf_token }}
+
+    <p><strong>Name</strong> <span>(required)</span></p>
+    <p>{{ form.name.label }}</p>
+    <p>{{ form.name }}</p>
+
+    <p><strong>Email</strong> <span>(required)</span></p>
+    <p>{{ form.email.label }}</p>
+    <p>{{ form.email }}</p>
+
+    <p><strong>Subject</strong> <span>(required)</span></p>
+    <p>{{ form.subject.label }}</p>
+    <p>{{ form.subject }}</p>
+
+    <p><strong>Message</strong> <span>(required)</span></p>
+    <p>{{ form.message.label }}</p>
+    <p>{{ form.message }}</p>
+
+    <p>{{ form.submit }}</p>
+  </form>
+</div>
+{% endblock %}
